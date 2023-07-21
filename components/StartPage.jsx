@@ -1,16 +1,39 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import AnimatedText from "./AnimatedText";
 import Button from "./Button";
 import Image from "next/image";
 
 export default function StartPage() {
+  const [deviceType, setDeviceType] = useState("/images/bg2.jpg");
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Determine the device type based on the screen width
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 768) {
+        setDeviceType("/images/bg2.jpg");
+      } else {
+        setDeviceType("");
+      }
+    };
+
+    // Add event listener for window resize to detect changes in device type
+    window.addEventListener("resize", handleResize);
+
+    // Call handleResize once initially to set the initial device type
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div
       style={{
-        backgroundImage: "url(/images/bg.jpg)",
+        backgroundImage: `url(${deviceType})`,
         backgroundRepeat: "no-repeat",
-        backgroundClip: "border-box",
-        backgroundOrigin: "border-box",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
