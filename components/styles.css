@@ -1,0 +1,7 @@
+.swiper-image-container image {
+  object-fit: contain;
+}
+.gg {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
