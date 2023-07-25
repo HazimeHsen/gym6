@@ -14,7 +14,7 @@ export default function StartPage() {
       if (screenWidth <= 768) {
         setDeviceType("/images/bg2.jpg");
       } else {
-        setDeviceType("");
+        setDeviceType("/images/bg.png");
       }
     };
 

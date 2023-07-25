@@ -4,7 +4,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="bg-[#ffffff] text-black">
+    <div className="bg-[#ffffff] mt-12 text-black">
       <div className="min-h-[70vh] flex flex-col items-center gap-20 py-20 w-[90%] xl:w-full mx-auto max-w-[1240px]">
         <h1 className="text-3xl font-bold  tracking-wide uppercase md:text-4xl">
           SERVICES
@@ -31,7 +31,10 @@ export default function page() {
                 </div>
               </div>
               <div className="flex justify-center">
-                <Button to="#" title="Book Now" />
+                <Button
+                  to="https://api.whatsapp.com/send?phone=96176055378"
+                  title="Book Now"
+                />
               </div>
             </div>
           ))}
