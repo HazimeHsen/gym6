@@ -86,7 +86,7 @@ export const questions = [
   },
   {
     question:
-      "How do i make sure iam doing an exercise correctly and not hurting myself give it onlime coaching ?",
+      "How do i make sure iam doing an exercise correctly and not hurting myself give it online coaching ?",
     answer: [
       "First communication with your coach is vital",
       "Second Each exercise in your program has its own tutorial video to help you learn how to perform the workout correctly.",
@@ -94,6 +94,6 @@ export const questions = [
   },
   {
     question: "How do i receive my programs and which platform is used ? ",
-    answer: ["Everything is shared through whatsupp or email as PDF"],
+    answer: ["Everything is shared through whatsApp or email as PDF"],
   },
 ];
